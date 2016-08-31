@@ -1,2 +1,2 @@
 # visa3033
-A class note for the modeling for 3D fabrication in York university 2016/2017 
+Class notes for the modeling for 3D fabrication course in York University 2016/2017 
