@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Modelling for 3D Fabrication</title>
+    
+<link href="css/site.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/highlight.default.css" media="screen" rel="stylesheet" type="text/css" />
+  
+<script src="js/jquery.js"></script>
+<script src="js/showdown.js" type="text/javascript"></script>
+
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+<!--
+Write the markdown code below.
+A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
+-->
+
+<div style="display: none" id="sourcetext">
+
+# 8.
+## Case studies
+### Dewey-Hagborg
+- [Bio-Art: 3D-Printed Faces Reconstructed from Stray DNA](http://www.livescience.com/50146-art-genetic-data-privacy.html) 				
+	- [NPR news](http://www.npr.org/sections/krulwich/2013/06/28/196307915/artist-plays-detective-can-i-reconstruct-a-face-from-a-piece-of-hair) 
+
+
+- [3-D printing technologies, Twinkind, Wired article](https://www.wired.com/2013/08/this-company-will-transform-you-into-an-incredibly-detailed-3-d-printed-figurine/)  
+
+
+## Controlling point cloud data
+- [Tutorial: using MeshLab](http://www.cse.iitd.ac.in/~mcs112609/Meshlab%20Tutorial.pdf)  
+	- A. Opening point clouds
+	- B. Editing point clouds(MeshLab) 
+	- C. Aligning point clouds 
+	- D. Mesh creation and editing
+  
+
+____________________
+
+</div>
+<div id="wrapper">
+	
+	<div class="header">
+		
+		<h2>FA/VISA 3033</h2><h2>FA/DATT 3940</h2>		
+		<a href="index.html">Class overview</a><br/>
+		<a href="file/VISA3033_ji_2016.pdf">Syllabus pdf</a><br/><br/>	
+				<a href="week01.html">1. Introduction</a><br/>	
+
+	</div>
+	<div class="section">
+		<script type="text/javascript">
+		//var converter = new Markdown.Converter();
+		var converter = new Showdown.converter();
+		document.write(converter.makeHtml($('#sourcetext').text()));
+		</script>
+	</div>
+	
+	<div class="footer">HyunKyung (Haru) Ji, 2016</div>
+	
+</div>
+</body>
+</html>

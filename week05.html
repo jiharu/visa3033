@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Modelling for 3D Fabrication</title>
+    
+<link href="css/site.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/highlight.default.css" media="screen" rel="stylesheet" type="text/css" />
+  
+<script src="js/jquery.js"></script>
+<script src="js/showdown.js" type="text/javascript"></script>
+
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+<!--
+Write the markdown code below.
+A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
+-->
+
+<div style="display: none" id="sourcetext">
+
+# 5. 3D photo scanning
+## Application
+- [123D Catch]()
+- [ARC 3D Webservice: A Family of Web Tools for Remote 3D Reconstruction](http://www.arc3d.be/)  
+	ARC3D is a tool for creating 3D models out of a set of images.  
+
+- [Paper-PhotoCloud: interactive remote exploration of large 2D-3D datasets.](http://vcg.isti.cnr.it/Publications/2013/BBTPCS13/)  
+	PhotoCloud is a real-time client-server system for interactive visualization and exploration of large datasets comprising thousands of calibrated 2D photographs of a scene and a complex 3D description of the scene. The system includes a compact image browser and a multiresolution model renderer. PhotoCloud employs iconic visualization of the images in the 3D space and projects images onto the 3D scene on the fly. Users can navigate the 2D and 3D spaces with smooth, integrated, seamless transitions between them. 
+	- [PhotoCloud webpage](http://vcg.isti.cnr.it/photocloud/index.php)  
+	
+- [PhotoScan Guide Part 1 - Getting Started with Basics [5:06]](https://www.youtube.com/watch?v=LeU_2SHwhqI)  
+- [PhotoScan Guide Part 2: Turntable Tutorial! [6:49]](https://www.youtube.com/watch?v=9_F-b2hxP_o)  
+
+___________________________
+## 
+
+
+-------------------------------------
+## Practice
+
+
+----------------------------------------	
+
+## Assignment
+
+
+--------------
+## Next week
+
+____________________
+
+</div>
+<div id="wrapper">
+	
+	<div class="header">
+		
+		<h2>FA/VISA 3033</h2><h2>FA/DATT 3940</h2>		
+		<a href="index.html">Class overview</a><br/>
+		<a href="file/VISA3033_ji_2016.pdf">Syllabus pdf</a><br/><br/>	
+				<a href="week01.html">1. Introduction</a><br/>		
+
+	</div>
+	<div class="section">
+		<script type="text/javascript">
+		//var converter = new Markdown.Converter();
+		var converter = new Showdown.converter();
+		document.write(converter.makeHtml($('#sourcetext').text()));
+		</script>
+	</div>
+	
+	<div class="footer">HyunKyung (Haru) Ji, 2016</div>
+	
+</div>
+</body>
+</html>
