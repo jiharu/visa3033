@@ -28,26 +28,55 @@ A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
 - Couse website: [http://jiharu.github.io/visa3033/](http://jiharu.github.io/visa3033/)  
 - Class portfolio: [http://2016visa3033.tumblr.com/](http://2016visa3033.tumblr.com/)  
 - [Syllabus.pdf](file/file/VISA3033_ji_2016.pdf)  
+- Instructor [Haru Ji](http://www.mat.ucsb.edu/~jiharu/new/works.html) 
 
 -------------------------------------
 
 # Modeling for 3D Fabrication
 ## What is 3D printing?
+- **3D printing** is the colloquial term for a group of technologies known as additive manufacturing based on a digital 3D model file.  
+
+	![week1_01](img/pipeline.png)
+	
+	- **Additive process**   
+	Additive sculpture is the process of creating sculpture by adding material to create the work: modeling with clay, wax, plaster, and paper-maché. However strictly speaking, additive manufacture is different from most other traditional manufacturing methods.  
+		- Casting: a mold is used to form molten material into a desired shape.  
+	- **Subtractive process**  
+	Subtractive sculpture is the oldest form of sculpture and involves removing material, as in wood carving or stone sculpture, to create a finished work. Subtractive sculpture is by far the most technically difficult and due to the nature of the medium is the most restrictive in expression: carving, milling, and cutting.  
+	- Other construction methods
+		- Attachment: welding, gluing, sawing, nailing materials together.     
+		- Assembly: the act of connecting together the parts of something such as a machine.  
 
 - The Ten Principles of 3D Printing: An excerpt from Hod Lipson and Melba Kurman's new book Fabricated: The New World of 3D Printing [big think blog link](http://bigthink.com/experts-corner/the-ten-principles-of-3d-printing).  
 
-## Introduction movies
+### Introductional video
+
 - [Animation film: Fully printed - a vision for the future of 3D printing by the Disseny Hub museum and gallery in Barcelona, 2010 [4:27]](https://www.youtube.com/watch?v=Eppr1erkI3A)  
+
+### Introductional TED video
+
 - [Ted talk Lisa Harouni: A primer on 3D printing, 2011 [14:49]](https://www.ted.com/talks/lisa_harouni_a_primer_on_3d_printing?language=en#t-35346)
 - [Making the Unmakeable - The 3rd Industrial Revolution: Joshua Harker at TEDxBinghamtonUniversity, 2013 [17:17]](https://www.youtube.com/watch?v=lBMASISJRlg)
 
 ## History
+### Photosculpture
+- **1860:** A revolving series of 24 photographs was reconstructed into a three-dimensional sculpture. [François Willème](http://www.luminous-lint.com/app/photographer/Francois__Willeme/A/)  -> Photogrammetry [How to set up a successful photogrammetry project](https://blog.sketchfab.com/how-to-set-up-a-successful-photogrammetry-project/)
+
+	Related links
+	- [François Willème, wikipedia](https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Will%C3%A8me)    
+	- [Sculpture as the Sum of Its Profiles: François Willème and Photosculpture in France, 1859-1868, Robert A. Sobieszek, The Art Bulletin Vol. 62, No. 4 (Dec., 1980), pp. 617-630](https://www.jstor.org/stable/3050057?seq=1#page_scan_tab_contents)    
+	- [Walters, Peter and Thirkell, Dr Paul (2007) New technologies for
+3D realization in Art and Design practice. Artifact, 1 (4). pp. 232-
+245.](http://www.uwe.ac.uk/sca/research/cfpr/staff/peter_walters/presentations_papers/walters_thirkell__manuscript_text.pdf)  
+
 ### Commercial system
 - **1986:** The patent of the first StereoLithography by Charles Hull/STL 3D systems. [- Patent US4575330: Apparatus for production of three-dimensional objects by stereolithography](http://www.google.com/patents/US4575330).  
 - **1971 filed, 1977 opened patent**: the concepts of scanning a 3D object with a laser and reproducing this in a photopolyer as a 3D object by Wyn Kelly Swainson [- US 4041476 A:Method, medium and apparatus for producing three-dimensional figure product](http://www.google.com.au/patents/US4041476)  
 
 #### Consumer system - open hardware
-
+- **Reprap project by Adrian Bowyer:** Bowyer shared the plans for the printer online for others to replicate and innovate upon. [Reprap project, wikipedia](https://en.wikipedia.org/wiki/RepRap_project)    
+- **2009:** the FDM (fused deposition modeling) patent expired!  
+- **2011:** DIY eD printers and the first online 3D printing services not for business-to-business but as an online creative community.
 
 ### Early 3D printed artwork
 
@@ -61,35 +90,39 @@ Dan Collins, 'Of More Than Two Minds', hydrocal casting, 1993.
 
 This sculpture was produced by capturing the movement of the artist using 3D laser scanning. The scanned data was then translated to a CAD model that was subsequently milled in wax using CNC milling. Wax prototyped translated into hydrocal casting.
 
-## 3D printing types
-
-### Conventional construction methods
-- **Subtractive process**  
-	Subtractive sculpture is the oldest form of sculpture and involves removing material, as in wood carving or stone sculpture, to create a finished work. Subtractive sculpture is by far the most technically difficult and due to the nature of the medium is the most restrictive in expression: carving.
-	
-- **Additive process**   
-	Additive sculpture describes all other forms of sculpture and the process most commonly used today. Simply put, additive sculpture is the process of creating sculpture by adding material to create the work: modeling with clay, wax, plaster, and paper-maché. 
-	- Casting: a mold is used to form molten material into a desired shape.  
-	
-#### Assembly and attachment
-- Attachment: welding, gluing, nailing materials together.     
-- Assembly: the act of connecting together the parts of something such as a machine.  
-
 ## 3D printing methods
-- Plastic Jet Printing Process: also called Fused Deposition Modeling (FDM), is the simplest and lowest cost method but limited to plastics and soft metals. Also lower precision.  Thermoplastic materials such as ABS and polycarbonates of various types. Some applications use soft metals. Material is fed into heated nozzle from a spool of thread or wire. 
+### Binding process
+Printing objects by using a printhead to bind a pre-spread layer of material, each time tracing and binding the cross sections of the object.
 
 - Stereolithography (SLA): Photosensitive resins of various types, clear or colored, in liquid form, poured into printing machine container. Material is hardened by ultraviolet light from laser. Remaining resin is reused. 
 
 - Selective Laser Sintering (SLS): Powders of polymers such as nylon (plain, glass-filled, or with other fillers) or polystyrene - metals including steel, titanium, gold, silver, alloy mixtures – ceramics of various kinds. High energy laser beam sinters (melts) the powder to form layers and attaching layers to each other. Unsintered powder serves as support for object until completed, then is reused.	
 
-- [3D pen: 3Doodler PRO](http://3doodlerpro.com/) 
- 	
-- [Building VR in VR with Unreal Engine 4 - Early Preview [1:58]](https://www.youtube.com/watch?v=JKO9fEjNiio)  	
+- Inkjet Powder Printing (3DP)
+
+- Laminated Object Manufacturing (LOM)
+
+### Deposition Processes
+Using a printhead to deposit the material itself on the previous section of extruded material.
+
+- Fused Deposition Modeling [FDM]: Fused Deposition Modeling (FDM) is an additive manufacturing technology that builds parts up layer-by-layer by heating and extruding thermoplastic filament.
+
+- Polyjet
+>- [Stratasys video](http://www.stratasys.com/resources/3d-printing-videos)  
+Plastic Jet Printing Process: also called Fused Deposition Modeling (FDM), is the simplest and lowest cost method but limited to plastics and soft metals. Also lower precision.  Thermoplastic materials such as ABS and polycarbonates of various types. Some applications use soft metals. Material is fed into heated nozzle from a spool of thread or wire. 
+
+- Paste Extrusion
+	- [3D pen: 3Doodler PRO](http://3doodlerpro.com/) 
+	- A group of University of Tokyo students overseen by architect Kengo Kuma have developed a 3D-printing pen that can be used to create complex architectural structures out of plastic sticks: ["drawn-in-place"](http://www.dezeen.com/2016/02/22/tokyo-university-research-students-3d-printed-pen-complex-architectural-structures-plastic/)
+	- 3D-printed chair by The Barlett UCL students: [The Spatial Curves project](http://www.dezeen.com/2016/02/05/bartlett-students-ucl-3d-printed-filigree-chairs-robots/)  
+	- [Lyx 3D pen](http://www.dezeen.com/2014/05/01/lix-smallest-3d-printing-pen-aluminium/)  
+	
 
 -------------------------
 
 # Modeling for 3D Fabrication
 ## Solid modeling
+Solid modeling (or modelling) is a consistent set of principles for mathematical and computer modeling of three-dimensional solids. Solid modeling is distinguished from related areas of geometric modeling and computer graphics by its emphasis on physical fidelity. [wikipedia](https://en.wikipedia.org/wiki/Solid_modeling) It results in a "watertight" model that is physically printable. The partially finished object has to be supported however, for example with a simultaneously printed scaffolding, to prevent overhanging geometires or disconnected features in the model from falling over during the printing process.
 
 ## Popular 3D modeling software for 3D fabrication
 - [Top 25: Most Popular 3D Modeling & Design Software for 3D Printing from i.materialise.com](https://i.materialise.com/blog/top-25-most-popular-3d-modeling-design-software-for-3d-printing/)  
@@ -99,62 +132,73 @@ This sculpture was produced by capturing the movement of the artist using 3D las
 	"The active use of the 3D printing features is trending upward. Because it’s already available for all Creative Cloud customers, it allows creative professionals and artists to experiment in cool and exciting ways without the need to learn or purchase new software."  
 	- [Video of sculptor James Stewart and his statue Jeri as a cast bronze piece and a 3D print tattooed in Adobe Photoshop [3:42]](http://create.adobe.com/2015/4/15/ancient_art_new_technology_sculpture_3d_printing_and_photoshop_.html)  
 	- [Tutorial: how to print a 3D object in Photoshop](https://helpx.adobe.com/photoshop/how-to/photoshop-print-3d.html)  
- 
+	
+## Personal 3D printing
+### Online 3D print services
+- [Shapeways](http://shapeways.com) 
+- [iMaterialise](https://i.materialise.com/)
+- [Ponoko](https://www.ponoko.com/)
+- [Sculpteo](https://www.sculpteo.com/en/)	
+- [MyMiniFactory](http://www.myminifactory.com)  
+- [GrabCAD](https://grabcad.com/)  
+- [pinshape](https://pinshape.com/)  
+- [YouMagine](https://www.youmagine.com/)  
+- [Thingiverge](http://www.thingiverse.com/)
 
 
+## Building 3D in 3D	
+- [Building VR in VR with Unreal Engine 4 - Early Preview [1:58]](https://www.youtube.com/watch?v=JKO9fEjNiio)  	
+	
 
 ----------------------
 ## Case study
 ### Nervous system
-Nervous System is a generative design studio that works at the intersection of science, art, and technology. Drawing inspiration from natural phenomena, we create computer simulations to generate designs and use digital fabrication to realize products.
+"**Nervous System** is a generative design studio that works at the intersection of science, art, and technology. Drawing inspiration from natural phenomena, we create computer simulations to generate designs and use digital fabrication to realize products."
 
 - [Look at These Clothes Made of 3-D Printed Chainmail](https://www.wired.com/2013/12/forget-self-driving-cars-google-is-sponsoring-3-d-printed-fashion/)  
+- [FLORAFORM – AN EXPLORATION OF DIFFERENTIAL GROWTH](http://n-e-r-v-o-u-s.com/blog/?p=6721)  
 
+### Prosthetic design 
+Scott Summit demonstrates how 3D Printing and digital scanning can be used to greatly improve Prosthetic design. [Youtube](https://www.youtube.com/watch?v=6wnnNk91EMs) 
 
-----------------------
+### Protocells trainer
+[Shamees Aden's Protocells trainer](http://www.dezeen.com/2013/12/11/3d-printed-trainers-synthetic-biology-protocells-shamees-aden-wearable-futures/) would be 3D-printed to the exact size of the user's foot from a material that would fit like a second skin. 
 
-# Overview of the project
-
-Biomorphic & geometric and spatial cell & unit form
-
-- Previous class (pdf or folder)
-- Reference artworks (pdf or folder)
-
-## Class organization
-- Organizing based on numbers of students, background, space, equipment, material availability.
-
-### What to decide:
-- An individual work or a group work for more efficient critique communication.
-- Space & equipment use.
-- Material use.
-- Presentation or portfolio.
-
+"You would take the trainers home and you would have to care for it as if it was a plant, making sure it has the natural resources needed to rejuvenate the cells," said the designer.
 
 ----------------------
 
 # Practice
-## Apps by Nervous system
-- Creating 3d printable bracelet using [the Kinematics Home](http://n-e-r-v-o-u-s.com/kinematicsHome): you can download your 3D data.  
+## Tumblr and survey
+
+- Create Tumblr account 	
+	Tumblr website is an another channel for the visual communication in our class. 
+- Conduct a simple [Survey](https://docs.google.com/forms/d/e/1FAIpQLSdd-Ia8XnXquww3Tb-4ZBWmOX_ahHkbYDvg_rgyKPrV0i5VtQ/viewform?usp=send_form) 	
+
+## Create 3D object
+
+Let's create your first printable 3D object using web based open software from Nervous System and from Autodesk:
+
+1. Create 3D objects which suit your aesthetics and download them to save on your computer.
+2. Open them using Meshlab. 
+	- Import the object and navigate it.
+
+### Apps by Nervous system
+- Creating 3D printable bracelet using [the Kinematics Home](http://n-e-r-v-o-u-s.com/kinematicsHome): you can download your 3D data.  
 - [Nervous system/labs/](http://n-e-r-v-o-u-s.com/labs/)
 
-## Project Shapeshifter 
+### Project Shapeshifter by Autodesk
+![week1_p](img/shapeshifter.png) 
 - [http://shapeshifter.io/](http://shapeshifter.io/)  
-	Project Shapeshifter is a free technology preview by Autodesk. It provides an easy way to create complex 3D Printable models in your web browser. With a simple tweak of sliders, you can control the object's shape and select a 3D pattern that wraps around it.
+	Project Shapeshifter is a free technology preview by Autodesk. It provides an easy way to create complex 3D-printable models in your web browser. With a simple tweak of sliders, you can control the object's shape and select a 3D pattern that wraps around it.
 
-## Assignment
-- Create Tumblr account 
-	- Then, upload your inspired works related to the class theme. 
-	- Also, upload your draft ideas in writings or sketches related to what you want to achieve in this class. A short sentence or a paragraph is enough.
-	- Please write down your name so that I can see who has uploaded. 
-	
-	Tumblr website is an another channel for the visual communication in our class.
-- Prepare materials
-	- Paper for construction (class offered).  
-	- Cutting knife (class offered).   
-	- Cutting mat (class offered). 
-	- Ruler (class offered). 
-	- Glue and masking tape (class offered).  
-	- **Drawing book, pencil, and eraser.**
+-------------------
+# Assignment
+- Review the class material.  
+- Upload your Meshlab screenshots to Tumblr. Please use "a01 by your name and date".  
+
+## Preparation
+- Bring your sketchbook or notebook and a pen or a pencil for your idea sketch.  
 		
 --------------
 </div>
