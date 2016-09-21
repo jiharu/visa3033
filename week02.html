@@ -20,28 +20,106 @@ A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
 
 <div style="display: none" id="sourcetext">
 
-# 2. 3D modeling by applying Voronoi patterns
-## Voronoi diagram  
--  Delauney triangles (thin lines) and associated Direchlet Tesselations (thick lines) for nine generating points. Triangle edges are perpendicular bisectors of the tile edges. Points within a tile are closer to the tile's generating point than to any other generating point.  
-	From [Paul Bourke, Efficient Triangulation Algorithm Suitable for Terrain Modelling, 1989](http://paulbourke.net/papers/triangulate/)  
+# Modeling for 3D Fabrication
+## Solid modeling
+Solid modeling (or modelling) is a consistent set of principles for mathematical and computer modeling of three-dimensional solids. Solid modeling is distinguished from related areas of geometric modeling and computer graphics by its emphasis on physical fidelity. [- wikipedia](https://en.wikipedia.org/wiki/Solid_modeling)   
+It results in a "watertight" model that is physically printable. The partially finished object has to be supported however, for example with a simultaneously printed scaffolding, to prevent overhanging geometires or disconnected features in the model from falling over during the printing process.
 
-	![week2_1](img/triangulate1.gif) 
+## Popular 3D modeling software for 3D fabrication
+- [A Community-Driven Library of Apps for AEC (Architecture, Engineering, and Construction) Professionals.](https://aec-apps.com/category/fabrication-cam)  
+- [Top 25: Most Popular 3D Modeling & Design Software for 3D Printing from i.materialise.com](https://i.materialise.com/blog/top-25-most-popular-3d-modeling-design-software-for-3d-printing/)  
+- [Let's Get Started
+20 Best 3D Printing Software Tools (Most are Free) from ALL3DP](https://all3dp.com/best-3d-printing-software-tools/#3DSlash)  
+- [3D printing support to Photoshop](http://www.designswaggs.com/3d-printing-photoshop-cc-the-future/)  
+	"The active use of the 3D printing features is trending upward. Because its already available for all Creative Cloud customers, it allows creative professionals and artists to experiment in cool and exciting ways without the need to learn or purchase new software."  
+	- [Video of sculptor James Stewart and his statue Jeri as a cast bronze piece and a 3D print tattooed in Adobe Photoshop [3:42]](http://create.adobe.com/2015/4/15/ancient_art_new_technology_sculpture_3d_printing_and_photoshop_.html)  
+	- [Tutorial: how to print a 3D object in Photoshop](https://helpx.adobe.com/photoshop/how-to/photoshop-print-3d.html)  
+	
+## Personal 3D printing
+### Online 3D print services
+- [Shapeways](http://shapeways.com) 
+- [iMaterialise](https://i.materialise.com/)
+- [Ponoko](https://www.ponoko.com/)
+- [Sculpteo](https://www.sculpteo.com/en/)	
+- [MyMiniFactory](http://www.myminifactory.com)  
+- [GrabCAD](https://grabcad.com/)  
+- [pinshape](https://pinshape.com/)  
+- [YouMagine](https://www.youmagine.com/)  
+- [Thingiverge](http://www.thingiverse.com/)
+
+----------------------------------------
+## Aesthetics in 3D: complexity is free
+- The Ten Principles of 3D Printing from the book *Fabricated: The New World of 3D Printing* [big think blog link](http://bigthink.com/experts-corner/the-ten-principles-of-3d-printing).  
+>In his book *Fabricated: The New World of 3D Printing*, Cornell University researcher Hod Lipson describes ten of the underlying principles fundamental to 3D printing. The first principle he notes is that "manufacturing complexity is free." Unlike traditional requires a more expensive mold with more parts, there is no penalty with 3D printing when an object is made more complex. On the contrary, in some cases there may even be a benefit.. With 3D printing, designers and artists can explore new kinds of highly complex and intricate forms that would have been impossible to realize with traditional techniques, and these come at no extra cost. - Printing Things. 
+
+- [.MGX by Materialise](http://www.mgxbymaterialise.com/)
+Founded in 2003, .MGX is the design division of Materialise N.V. 
+>a pioneering brand focused on the design and production of consumer products created using 3D printing methods. They invited world-class designers to experiment with 3D printing and come up with novel products that were only possible with this new technology... 3D printing could finally unlock its own formal language and aesthetic identity. - Printing things.  
+
+- ["3D printing is abused" - Ron Arad](http://www.dezeen.com/2013/08/27/ron-arad-movie-3d-printing-the-future-is-here/)  
+	- [Not Made by Hand Not Made in China, vimeo movie](https://vimeo.com/175408224)  
+
+--------------------------------------------	
+# 3D modeling by applying Voronoi patterns
+## Voronoi diagram  
+
+![week2_1](img/triangulate1.gif) 
+	
+-  The above image shows the Delauney triangles (thin lines) and associated Direchlet Tesselations (thick lines) for nine generating points. Triangle edges are perpendicular bisectors of the tile edges. Points within a tile are closer to the tile's generating point than to any other generating point.  
+	From [Paul Bourke, Efficient Triangulation Algorithm Suitable for Terrain Modelling, 1989](http://paulbourke.net/papers/triangulate/)  
 
 - [Voronoi Diagram from the worlfram mathworld](http://mathworld.wolfram.com/VoronoiDiagram.html)
 
-	A Voronoi diagram is created from the partitioning of a plane with n points into convex polygons such that each polygon contains exactly one generating point and every point in a given polygon is closer to its generating point than to any other. A Voronoi diagram is sometimes also known as a Dirichlet tessellation. The cells are called Dirichlet regions, Thiessen polytopes, or Voronoi polygons.
+	A Voronoi diagram is created from the partitioning of a plane with *n* points into convex polygons such that each polygon contains exactly one generating point and every point in a given polygon is closer to its generating point than to any other. A Voronoi diagram is sometimes also known as a Dirichlet tessellation. The cells are called Dirichlet regions, Thiessen polytopes, or Voronoi polygons.
 
-	Voronoi diagrams were considered as early at 1644 by René Descartes and were used by Dirichlet (1850) in the investigation of positive quadratic forms. They were also studied by Voronoi (1907), who extended the investigation of Voronoi diagrams to higher dimensions. They find widespread applications in areas such as computer graphics, epidemiology, geophysics, and meteorology. A particularly notable use of a Voronoi diagram was the analysis of the 1854 cholera epidemic in London, in which physician John Snow determined a strong correlation of deaths with proximity to a particular (and infected) water pump on Broad Street.
+	Voronoi diagrams were considered as early at 1644 by Ren Descartes and were used by Dirichlet (1850) in the investigation of positive quadratic forms. They were also studied by Voronoi (1907), who extended the investigation of Voronoi diagrams to higher dimensions. They find widespread applications in areas such as computer graphics, epidemiology, geophysics, and meteorology. A particularly notable use of a Voronoi diagram was the analysis of the 1854 cholera epidemic in London, in which physician John Snow determined a strong correlation of deaths with proximity to a particular (and infected) water pump on Broad Street.
 - [Map and Voronoi tessellation](http://geographer-notes.blogspot.ca/2012/03/map-of-week-3-5-2012craigslist-meets.html)  
 
 	![week2_2](img/craigslist_voronoi_tesselation.jpg) 
 	Map showing Craigslist market territories, or Craigs-sheds, as we might call them.  From: http://uxblog.idvsolutions.com/2011/07/chalkboard-maps-united-states-of.html	
-	
---------------------------------------------	
-	
-## Creating Voronoi mesh
-### using Meshmixer
-- [How to Make Voronoi Patterns with Autodesk® Meshmixer](http://www.instructables.com/id/Make-Voronoi-Pattern-with-Autodesk-Meshmixer/)  
+
+----------------------
+## Case study
+### Nervous system
+"**Nervous System** is a generative design studio that works at the intersection of science, art, and technology. Drawing inspiration from natural phenomena, we create computer simulations to generate designs and use digital fabrication to realize products."
+
+- [Look at These Clothes Made of 3-D Printed Chainmail](https://www.wired.com/2013/12/forget-self-driving-cars-google-is-sponsoring-3-d-printed-fashion/)  
+
+### Prosthetic design 
+Scott Summit demonstrates how 3D Printing and digital scanning can be used to greatly improve Prosthetic design. [Youtube](https://www.youtube.com/watch?v=6wnnNk91EMs) 
+
+### Protocells trainer
+[Shamees Aden's Protocells trainer](http://www.dezeen.com/2013/12/11/3d-printed-trainers-synthetic-biology-protocells-shamees-aden-wearable-futures/) would be 3D-printed to the exact size of the user's foot from a material that would fit like a second skin. 
+
+"You would take the trainers home and you would have to care for it as if it was a plant, making sure it has the natural resources needed to rejuvenate the cells," said the designer.
+
+----------------------
+# Modeling softwares
+## Meshlab
+**A processing system for 3D triangular meshes.**
+
+MeshLab is an advanced mesh processing system, for the automatic and userassisted editing, cleaning, filtering, converting, and rendering of largeunstructured3Dtriangularmeshes.MeshLab is actively developed by a small group at the Visual Computing Lab at the ISTI CNR institute, a large group of university students, and some great developers from the rest of the world. For basic mesh processing tasks and for its internal data structures the system relies on the GPL VCG library.
+
+### Helpful documentation
+- [Meshlab webpage](http://www.meshlab.org/)  
+- [Meshlab documentation.pdf](http://www.cyi.ac.cy/system/files/MeshLab%20Documentation1.pdf)  
+- [Mister P. MeshLab Tutorials in youtube channel](https://www.youtube.com/user/MrPMeshLabTutorials/videos)  
+- [MeshLab: an Open-Source Mesh Processing Tool by P. Cignoni, M. Callieri, M. Corsini, M. Dellepiane, F. Ganovelli, G. Ranzuglia, 
+Visual Computing Lab, ISTI - CNR, 2008](https://pdfs.semanticscholar.org/1a3e/542b908e6af7923b04d4738e45e5bac10dcb.pdf)  
+- [Edutech wiki: Meshlab for RapMan tutorial](http://edutechwiki.unige.ch/en/Meshlab_for_RapMan_tutorial)  
+
+## Autodesk Meshmixer
+- [Meshmixer](http://meshmixer.com/)  
+- [Meshmixer: help documention](http://meshmixer.com/help/)
+
+- [3D Printing With Meshmixer: A Beginner-friendly Introduction to 3D Sculpting and Combining Meshes](https://i.materialise.com/blog/3d-printing-with-meshmixer-a-beginner-friendly-introduction-to-3d-sculpting-and-combining-meshes/)  
+	Meshmixer is a free 3D sculpting-based CAD (Computer Assisted Design) program created by Autodesk as part of their 123D software line. Autodesk is best known for releasing premium-rate professional-grade software like Maya and 3Ds Max, while their 123D  line of free software can be seen as a simpler, beginner-friendly versions of those professional programs. Meshmixer can be used to intuitively sculpt designs, hollow them out, cut them apart, and combine parts together without wrecking a meshs internal or external geometry. It also covers how to prepare a design for 3D printing.
+
+------------------------------------
+# Practice
+## Creating Voronoi meshes
+### Using Meshmixer
+- [How to Make Voronoi Patterns with Autodesk Meshmixer](http://www.instructables.com/id/Make-Voronoi-Pattern-with-Autodesk-Meshmixer/)  
 	- [Related 3Dprint.com article](https://3dprint.com/62325/3d-printing-voronoi-models/)  
 	
 	![week2_3](img/meshmixer.png)   
@@ -59,24 +137,10 @@ A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
 - [Tutorial: voronoi-zation](http://w-uh.com/posts/140511c-Voronoization.html)  
 
 ___________________________________________	
-# Modeling softwares
-## Meshlab
-**A processing system for 3D triangular meshes.**
-
-MeshLab  is  a  advanced  mesh  processing  system,  for  the  automatic  and  user assisted  editing,  cleaning,  filtering  converting  and  rendering  of  large unstructured 3D triangular meshes. MeshLab is actively developed by the a small group of people at  the Visual Computing Lab at  the ISTI ‐ CNR institute, a large group  of  university  students  and  some  great  developers  from  the  rest  of  the world. For  the basic mesh processing  tasks and  for  the internal data structures the system relies on the GPL VCG library. 
-
-### Helpful documentation
-- [Meshlab webpate](http://www.meshlab.org/)  
-- [Meshlab documentation.pdf](http://www.cyi.ac.cy/system/files/MeshLab%20Documentation1.pdf)  
-- [Mister P. MeshLab Tutorials in youtube channel](https://www.youtube.com/user/MrPMeshLabTutorials/videos)  
-- [Paper-MeshLab: an Open-Source Mesh Processing Tool by P. Cignoni, M. Callieri, M. Corsini, M. Dellepiane, F. Ganovelli, G. Ranzuglia, 
-Visual Computing Lab, ISTI - CNR, 2008](https://pdfs.semanticscholar.org/1a3e/542b908e6af7923b04d4738e45e5bac10dcb.pdf)  
-- [Edutech wiki: Meshlab for RapMan tutorial](http://edutechwiki.unige.ch/en/Meshlab_for_RapMan_tutorial)  
-
-## Autodesk Meshmixer
-- [3D Printing With Meshmixer: A Beginner-friendly Introduction to 3D Sculpting and Combining Meshes](https://i.materialise.com/blog/3d-printing-with-meshmixer-a-beginner-friendly-introduction-to-3d-sculpting-and-combining-meshes/)  
-	Meshmixer is a free 3D sculpting-based CAD (Computer Assisted Design) program created by Autodesk as part of their “123D” software line. Autodesk is best known for releasing premium-rate professional-grade software like Maya and 3Ds Max, and their “123D” free line can be seen as a simpler, beginner-friendly version of those professional programs. This Meshmixer covers how Autodesk Meshmixer can be used to intuitively sculpt designs, hollow them out, cut them apart, and combine parts together without wrecking your mesh’s internal or external geometry. It also covers how to prepare your design for 3D printing.
-
+# Assignment
+- Review the class material.  
+- Recreate voronoi object using Meshmixer primitive objects and import it to Meshlab. Upload your Meshlab screenshots and .stl file to Tumblr. Please use "a02 by your name and date".  
+	- [Autodesk Meshmixer 101 tutorial Youtube link](https://www.youtube.com/watch?v=OlCjuIIVDuw&index=1&list=PLu8TYSQ5jCFjdQBHsLoybhdKXOTmpTRlb)  
 
 --------------
 </div>
@@ -86,8 +150,10 @@ Visual Computing Lab, ISTI - CNR, 2008](https://pdfs.semanticscholar.org/1a3e/54
 		
 		<h2>FA/VISA 3033</h2><h2>FA/DATT 3940</h2>		
 		<a href="index.html">Class overview</a><br/>
-		<a href="file/VISA3033_ji_2016.pdf">Syllabus pdf</a><br/><br/>	
-				<a href="week01.html">1. Introduction</a><br/>	
+		<a href="file/VISA3033_ji_2016.pdf">Syllabus pdf</a><br/>  	
+		<a href=http://2016visa3033.tumblr.com/>Tumblr class portfolio</a><br/><br/>
+				<a href="week01.html">Introduction</a><br/>	                                  									 
+				<a href="week02.html">Voronoi Modeling</a><br/>                                 
 							
 	</div>
 	<div class="section">
