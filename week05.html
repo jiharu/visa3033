@@ -22,34 +22,120 @@ A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
 
 
 # The fundamental of 3D modeling 
+### 3D files
+We need specific 3D modeling data “tells” the printer what to print.
+
+- STL (STereoLithography): The STL file simply defines points in space and connects those points together to form a series of triangles, which in total, are called a “mesh” or “mesh object.” The file is called a “shell model” and can be thought of as a thin skin with a hollow interior.  
+
+- OBJ   
+
+-----------------------------
 
 ## Building 3D in 3D	
 - [Building VR in VR with Unreal Engine 4 - Early Preview [1:58]](https://www.youtube.com/watch?v=JKO9fEjNiio) 
 
-# The fundamental of 3D fabrication
+Sculpt a single stamp
+
+# Model: Mobius
+- [Shapeways: Exporting from Maya using COLLADA](https://www.shapeways.com/tutorials/exporting-from-maya-with-collada-3dprinting)
+
+## A. Scale of the model 
+Check the unit conversion in your software (mm to cm or similar).  
+- **In Maya:**
+go to 'Window / Settings/Preferences / Preferences / Settings' and set your units. Since Shapeways displays metric units, set it to centimeters.
+
+## B. Hollowing the model
+Hollowing out your model can result in a tremendous reduction of material used, and thus money spent. 
+- **In Maya:**
+go to 'Edit Mesh / Extrude'. From the channel box add the thickness value to **'the local translation Z'.
+
+## C. Smoothing the model
+when you complete all the processes, just before exporting the final object, you can smooth the model to gain the high refined result. 
+- **In Maya:** 
+do a mesh smooth 'Mesh / Smooth' with a level of 1 or 2 depending on how smooth you want it to be and how many polygons it results in. 
+
+# Texture
+## UV texturing in Maya
+The below image shows how to do UV mapping and the use of place2DTexture node for the 2D texture placement.  
+
+- [Maya help: 2D placement](http://help.autodesk.com/view/MAYAUL/2016/ENU/?guid=GUID-94070C7E-C550-42FD-AFC9-FBE82B173B1D)  
+
+![tex](img/texturing.png)
+
+## Reference
+- [Shapeways: Exporting to VRML and X3D for color printing](https://www.shapeways.com/tutorials/exporting_to_vrml_and_x3d_for_color_printing)  
+### Process outline
+
+1. In your 3D application, create a texture map.
+In Maya, 1. an objet need UV coordinates. 2. you need to assign a material to link a texture map. 3. Export it as a obj file checking material on in the export option.  
+2. Export your model to VRML97 or X3D.
+We can change obj or stl to x3d in Meshlab. 
+3. Create a .zip archive of the exported model, and all the texture map images - no folder included.  
+4. Upload the archive.
 
 
------------------------------
 
-# 5. 3D photo scanning
-## Application
-- [123D Catch]()
-- [ARC 3D Webservice: A Family of Web Tools for Remote 3D Reconstruction](http://www.arc3d.be/)  
-	ARC3D is a tool for creating 3D models out of a set of images.  
 
-- [Paper-PhotoCloud: interactive remote exploration of large 2D-3D datasets.](http://vcg.isti.cnr.it/Publications/2013/BBTPCS13/)  
-	PhotoCloud is a real-time client-server system for interactive visualization and exploration of large datasets comprising thousands of calibrated 2D photographs of a scene and a complex 3D description of the scene. The system includes a compact image browser and a multiresolution model renderer. PhotoCloud employs iconic visualization of the images in the 3D space and projects images onto the 3D scene on the fly. Users can navigate the 2D and 3D spaces with smooth, integrated, seamless transitions between them. 
-	- [PhotoCloud webpage](http://vcg.isti.cnr.it/photocloud/index.php)  
-	
-- [PhotoScan Guide Part 1 - Getting Started with Basics [5:06]](https://www.youtube.com/watch?v=LeU_2SHwhqI)  
-- [PhotoScan Guide Part 2: Turntable Tutorial! [6:49]](https://www.youtube.com/watch?v=9_F-b2hxP_o)  
+
+# Color: texture map
+## Reference
+- [LGM: EXPORTING A MODEL WITH COLOR AND/OR TEXTURE MAPS](http://www.lgm3d.com/blog/exporting-a-model-with-color-and-or-texture-maps)  
+3D Printing in Color can be difficult, especially the first time. It requires particular file formats and each CAD package has different output options.  
+
+
+
 
 ----------------------
 ## Case study
+Bathsheba Grossman
+
+http://www.evolution-of-genius.de/gallery/default.htm#
+Mathmod
+https://sourceforge.net/projects/mathmod/
+
+-----------------------------
+# Topmod
+TopMod was developed by a team at the Texas A&M Visualization Laboratory in the early 2000s. You can create basic and complex forms that can be exported for further manipulation in programs such as Meshmixer and SketchUp.  
+
+- [
+TopMod sites](https://sites.google.com/site/topmod3d/)
+
+## Download
+- [Topmod 2.223 Sep 2007](https://code.google.com/p/topmod/issues/detail?id=2#c5.)
+
+--------------------
+
+## Inspiration
+- [FOLDING the UNFOLDABLE: QUAD-EDGE DATA STRUCTURES](https://www.youtube.com/watch?v=94FsyZv5Xlw) 
+
+## Reference
+- [fabFAB](https://fabulouslyfabricated.wordpress.com/)  
+fabulouslyfabricated.wordpress.com was the online, virtual home for students undertaking the RMIT Communications Elective “Fabulously Fabricated”, which ran for three consecutive semesters in 2010 and 2011.  The blog is inactive now but remains online as a reference and resource.  For enquiries please contact Jessica In injihyun[at]gmail.com.
 
 
 -------------------------------------
-## Practice
+# Practice
+## Tutorial
+
+### Navigation
+- Pan/track: Alt + mouse wheel button
+- Rotate/tumble: Alt + mouse left button
+- Zoom: mouse wheel button
+
+### Resetting camera
+- Display / Reset camera (F)
+
+- [TopMod - Moebius Strip Checkerboard by Dave Morris](https://www.youtube.com/watch?v=kipk60Fjt4A) 
+
+## Topmod: dodecahedron
+Inspiration: [Dode silver by CUNICODE](http://www.cunicode.com/store/)
+
+- Create Dodecahedron primitive: Primitives / Dodecahedron  
+- Wireframe Modeling to make holes: Tool / High Genus / Wireframe Modeling   
+- Add Handles: Tool / High Genus / Add Handles   
+- Smoothing: Remeshing / 4-Conversion / Doo Sabin or Catmull Clark
+
+![topmode_dode02](img/topmod01_01.png), ![topmode_dode01](img/topmod01.png) 
 
 
 ----------------------------------------	

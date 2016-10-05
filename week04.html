@@ -20,61 +20,157 @@ A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
 
 <div style="display: none" id="sourcetext">
 
-# Mobius
-Maya
+# Assembly free construction
+## How to make the biggest 3D prints from the smallest 3D printers
+Every 3D printer has a limited build volume, defined by the bounding box in which the part has to fit. 
 
-## 3D files
-We need specific 3D modeling data “tells” the printer what to print.
-
-- STL (STereoLithography): The STL file simply defines points in space and connects those points together to form a series of triangles, which in total, are called a “mesh” or “mesh object.” The file is called a “shell model” and can be thought of as a thin skin with a hollow interior.  
-
-- OBJ
-
--------------------------------
-
-# Building blocks
-
-# Single shot: Assembly free construction
-
-## How to Make the Biggest 3D Prints from the Smallest 3D Printers
 - [TED video - Skylar Tibbits: The emergence of "4D printing", 2013 [8:19]](http://www.ted.com/talks/skylar_tibbits_the_emergence_of_4d_printing)
 	- [Skylar Tibbits: 4D printing from the Shapeways blog](http://www.shapeways.com/blog/archives/2266-how-to-make-the-biggest-3d-prints-from-the-smallest-3d-printers.html)    
 
 - [Structures & Lattices from cunicode](http://www.cunicode.com/works/structures)  
-	Ongoing research on structures & lattices to enhance SLS 3D-Print properties.
+	Ongoing research on structures & lattices to enhance SLS 3D-print properties.
 
 - [3D Chainmail written by Paul Bourke, inspired by John Shier, January 2014](http://paulbourke.net/geometry/chainmail3d/)  
-	Protective armour for a 4 dimensional knight.
+	Protective armour for a 4-dimensional knight.
 	
-- [3D Printed Dress for Dissertation ](https://3dprint.com/141962/3d-print-dress-fashion-student/)  	
+- [3D Printed Dress for Dissertation ](https://3dprint.com/141962/3d-print-dress-fashion-student/) 
 
 ----------------------
-## Case study
+# Case study
+- [Doug Bucci](http://www.dougbucci.com/index.php/portfolio/category/1-islet)  
+The literal definition of Diabetes Mellitus is “siphon honey”, which inspired me to use the hexagonal “honeycomb” to represent a cell shape, a pure and mathematically sound structure for generating form. The honeycomb cells were manipulated via Computer Aided Design (CAD) to generate more complex structures. This transformation of microscopic cellular structure into tangible form has evolved into the Islet Series, which integrates real biologically inspired data into jewelry form via CAD. 
 
+- [MAGNETIC MOTION by Philip Beesley, The collaboration between fashion and architecture](http://www.philipbeesleyarchitect.com/)  
+The collaborators' innovative designs combine precisely detailed polymer, crystal and leather components into interlinking three-dimensional fabric structures with striking qualities of flexibility, sparkle and transparency.
+
+
+- [Joris Laarman](http://www.jorislaarman.com/work/bits-parts/) and [Bit&Parts](http://www.bitsandparts.org/thankyou/)  
+BITS&PARTS aims to utilize small 3D printers and CNC milling machines to fabricate full size affordable furniture available to all.
+
+- [threeASFOUR](http://www.threeasfour.com/fw16b/21)  
+Founded in 2005 by the designers Gabriel Asfour, Angela Donhauser, and Adi Gil, the collective has built a legacy of fusing cutting-edge technology with traditional craftsmanship to create clothing at the intersection of fashion, sculpture, and mysticism. Recipients of the Cooper-Hewitt/Smithmonian Museum's 2015 National Design Award, threeASFOUR has collaborated with numerous artists and musicians, including Björk, Yoko Ono, and Matthew Barney.
+
+- [3d printed clothes from 3Dprint.com](https://3dprint.com/tag/3d-printed-clothes/) 
+
+- [The first articulated 3D-printed gown, designed by Michael Schmidt with architect Francis Bitonti and printed by Shapeways for burlesque icon Dita Von Teese](https://www.youtube.com/watch?v=J4zGFdKfU1U)  
+
+- [3D printed flexible textiles - a stitch toward personalized clothing](http://www.3ders.org/articles/20140128-3d-printed-flexible-textiles-a-stitch-toward-personalized-clothing.html)  
+
+- [4D Printing & Meta Materials](http://www.3dprinting.lighting/event/4d-printing-meta-materials-conference/)  
+
+- [Metamaterial Mechanisms enables a 3D printer to mimic machines from a single object](http://www.3ders.org/articles/20160913-metamaterial-mechanisms-enables-a-3d-printer-to-mimmic-machines-from-a-single-object.html)
+
+- [The free universal construction kit](https://vimeo.com/37778890)  
+
+- [Hacking households by Jesse Howard](http://www.jessehoward.net/work/hackinghouseholds)  
+
+-------------------------- 	
+
+## Inspiration
+- [Maneuvrable structure](https://www.youtube.com/watch?v=mcc4UHlUPAA&list=PLnsLTY48ZEK1cgVCKPxvjV5uhoIVPQfTV&index=1)  
 
 ----------------------------------------	
 # Practice
-## Tutorial
+- Practice A: Creating 3 * 3 chain-mail block in Maya  
+- Practice B: Creating chain-mail in Blender
+- Practice C: Booleans operations  
+- Practice D: 3D Text in Maya
+
+-----------------------------------------
+## Practice A: 3 * 3 chain-mail block in Maya 
+
+- Create a torus: Create / Polygon Primitives / Torus 
+	- R (Radius): 3.5  
+	- r (Section Radius): 0.5   
+	- Axis division: 40    
+	- Height division: 20  
+	
+	![chainmail_m01](img/maya01.png) 
+	
+- Duplicate the torus in the X and Z directions
+	- Using Edit / Duplicate Special 
+	
+	![chainmail_m02_01](img/maya02_01.png)
+	![chainmail_m02](img/maya02.png)   
+	
+- Duplicate the torus in the Y direction
+	- Using Edit / Duplicate Special 
+	- Duplicate missing bridges manually to complete  
+	
+	![chainmail_m03](img/maya03.png) 
+	
+- Create your own set by changing the parameter values, proportions, or scales.	
+
+	![chainmail_m04](img/maya04.png) 
+	
+- Choose the object and save it as .obj file.  
+	- If you can't find obj file format, you can load it from Windows / Settings / Preferences / Plug-in Manager /	
+	
+	![chainmail_m05](img/maya05_obj.png) 
+
+## Practice B: chain-mail in Blender
 - [How to Design and 3D Print Chainmail Patterns and Interlocking Parts using Blender by Roxy](https://i.materialise.com/blog/how-to-design-and-3d-print-chainmail-and-other-interlocking-parts/)  
 	- Note that it is an old version of Blender, however the commands and how they work remain the same.   
-- [3D Printed Chain Mail Armor using OpenSCAD by Ed Nisley](https://softsolder.com/2014/12/08/3d-printed-chain-mail-armor-joined-sheets-fabric/)  
-	- [3D Printed Chain Mail Armor: Cosplay Edition](https://softsolder.com/2014/12/04/3d-printed-chain-mail-armor-cosplay-edition/)
-	- [3D Printed Chain Mail Again](https://softsolder.com/2014/11/27/3d-printed-chain-mail-again/)
+	- Blender tutorials:
+		- [Tutorials from Blender webpage](https://www.blender.org/support/tutorials/)  
+		- [Blender for 3D Printing tutorial](https://cloud.blender.org/p/3d-printing/):   
+		Blender has supported 3D printing modeling and file formats since 2002. From version 2.67 (* Now it's 2.77a in September 2016) Blender supports a 3D Printing Toolbox and real-time Mesh Analysis features.			
 	
-## Reference 
-- [Blender tutorials from its webpage](https://www.blender.org/support/tutorials/)  
+## Reference: Chain mail making in OpenSCAD by Ed Nisley	
 
-- [Blender for 3D Printing tutorial](https://cloud.blender.org/p/3d-printing/)
+- [OpenSCAD User Manual](http://www.openscad.org/documentation.html)  
+- [3D Printed chain Mail Armor using OpenSCAD](https://softsolder.com/2014/12/08/3d-printed-chain-mail-armor-joined-sheets-fabric/)  
+- [3D Printed Chain Mail Armor: Cosplay Edition](https://softsolder.com/2014/12/04/3d-printed-chain-mail-armor-cosplay-edition/)  
+- [3D Printed Chain Mail Again](https://softsolder.com/2014/11/27/3d-printed-chain-mail-again/)
 
-	Tutorial about:  
-	Blender has supported 3D printing modeling and file formats since 2002. However, from Blender version 2.67 (* Now it's 2.77a in September 2016) this now is even more accessible and powerful, thanks to the 3D Printing Toolbox and real-time Mesh Analysis features.
+---------------------------------------------
 
-	This Training Tutorial is for everyone who is into 3D printing, beginners and professionals alike. There are extensive chapters introducing Blender modeling for new users, and then going on to cover everything you need to know to create efficient, high-quality 3D prints – including color, wall thickness, and overhang problems. You will also find printable models to experiment with yourself.
+## Booleans operation
+Three boolean operations let you combine objects to make shapes that would otherwise be difficult to model using other techniques. You can add, subtract, or intersect objects to create a new, complex shape. [Examples](http://help.autodesk.com/view/MAYAUL/2016/ENU/?guid=GUID-7DADD144-6C29-4AE3-B877-A9947B2F26E0)
 
-	Whether you own your own 3D printer, or use online services such as ShapeWays, this 3+-hour training tutorial will help you join in this exciting new maker era!	
+### The example of Boolean process
+![boo01](img/bl01.png) 
+
+### Different kinds of boolean operation 
+![boo01](img/bl02.png)  
+
+## Practice C: Boolean operaions
+	
+- In Maya, polygons
+	1. Create more than 2 polygon objects.
+	2. Choose model 1 and model 2.
+	4. Click Boolean operation from Modeling menu set -> Mesh / Booleans / select among 'Union, Difference, and Intersection'. 
+
+---------------------------------------
+## Practice D: 3D Text in Maya  
+- in Maya: **Create / Text**
+
+<!--![bb01](img/bb.png) -->
+![bb02](img/bb01.png)
+![bb03](img/bb02.png)
+![bb04](img/bb03.png) 
+
+----------------------------------------
 	
 ## Assignment
-- Complete the class work.
+- Complete today's class works and upload your final and unique customized chain mail screenshot(s) to Tumblr and its modeling data to the google drive. 
+	- Consider factors for fabrication: size, stability, strength..
+	- Please name your file with your name and date. Caption to Tumblr is: "a04 by your name and date".   
+
+-----------------------------------------------------------------------------
+
+## Mid-term project consideration  
+- **Mid-term project (individual): An arts research presentation at 6th week + first print + modeling data.**     
+	- An arts research presentation: develop your own preferences and artistic direction regarding 3D fabrication.
+	- Presentation format 
+		- Length: Presentation needs to be done in 3 mins so around 3~5 pages including the front title page will be good.
+		- What it needs to include: 
+			- your research about an inspiring 3D fabrication artwork and artist.  
+			- Keywords to show your object and subject direction in 3d fabrication.  
+			- your sketch to show your concept 
+			- your brief plan to achieve your goal
+			- any kind of collaboration you expect to do
+	- First 3D printing and its modeling data: applying the chainmail structure, build your 3D modeling and print it at approximately 2 inch (5 cm) size.  
 
 --------------
 </div>
@@ -89,7 +185,9 @@ We need specific 3D modeling data “tells” the printer what to print.
 		<a href=https://docs.google.com/spreadsheets/d/10F2hL8TmGVmrrsoCJejEzpArJBxQZTT81xbLGUx-qiY/edit?usp=sharing>Assignment grading</a><br/>
 		<a href=https://drive.google.com/drive/folders/0B7x8GrEkHm-LVFJraWpHaE9MX2M?usp=sharing>3D fab data</a><br/><br/>  												
 		<a href="week01.html">Introduction</a><br/>	                                  				
-		<a href="week02.html">Voronoi Modeling</a><br/> 		<a href="week03.html">Online 3D printing</a><br/>          
+		<a href="week02.html">Voronoi Modeling</a><br/> 		
+		<a href="week03.html">Online 3D printing</a><br/>     
+		<a href="week04.html">Assembly-free</a><br/>     
 		                       
 		                       
 							
