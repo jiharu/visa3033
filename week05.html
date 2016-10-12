@@ -20,40 +20,69 @@ A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
 
 <div style="display: none" id="sourcetext">
 
+# Möbius strip 
+## Case study
+- [Adam Nathaniel Furman, Identity Parade](file:///Volumes/Frodo/git/visa3033/week05.html)  
+- OMOTE 3D SHASHIN KAN by Party, [Youtube](https://www.youtube.com/watch?v=POx6eWOr97I), [Dezeen](http://www.dezeen.com/2012/11/23/omote-3d-printing-photo-booth-shashinkan-by-party/)  
+- [inkimals customizable 3-D printed color toys by aminimal](http://www.designboom.com/technology/inkimals-customizable-3-d-printed-color-toys-by-aminimal-11-12-2013/)  
+- [Colony Experiments by Nervous System](http://n-e-r-v-o-u-s.com/projects/albums/colony/)  
+- [Gradient Bangles by Maiko Gubler](http://www.maikogubler.com/gradientbangles)  
+- [LINE & MASS by Laureline Galliot](https://vimeo.com/71247736)    
 
-# The fundamental of 3D modeling 
-### 3D files
-We need specific 3D modeling data “tells” the printer what to print.
+## Topology 
+- A surface, a two-dimensional manifold, looks flat in a local view, but it can have a more-interesting global structure.
 
-- STL (STereoLithography): The STL file simply defines points in space and connects those points together to form a series of triangles, which in total, are called a “mesh” or “mesh object.” The file is called a “shell model” and can be thought of as a thin skin with a hollow interior.  
+- Topological objects are categorized by their genus (number of holes).
 
-- OBJ   
+	![topo01](img/05/topo01.jpg)   
+	
+### Definition
 
------------------------------
+- **Topology is the mathematical study of *shapes* and *spaces*.** It is a major area of mathematics concerned with the most basic properties of space, such as *connectedness*, *continuity* and *boundary*. It is the study of properties that are preserved under continuous deformations including stretching and bending, but not tearing or gluing. Topology developed as a field of study out of geometry and set theory, through analysis of such concepts as space, dimension, and transformation. 
 
-## Building 3D in 3D	
-- [Building VR in VR with Unreal Engine 4 - Early Preview [1:58]](https://www.youtube.com/watch?v=JKO9fEjNiio) 
+	e.g. a Möbius strip is a kind of object studied in topology which has only one surface and one edge.  
+	
+	![mobius](img/05/mobius_escher.gif)
+	- The gif clip is from [Mobius from mathcurve.com](http://www.mathcurve.com/surfaces/mobius/mobius.shtml)
+	
+- The definition of topology leads to the following mathematical joke (Renteln and Dundes 2005)	
+	
+	***"What is a topologist?""***  
+	***"Someone who cannot distinguish between a doughnut and a coffee cup."*** [Wolfram mathworld](http://mathworld.wolfram.com/Topology.html)<!-- [위상이란 무엇인가?](http://mathnmath.tistory.com/39)   -->
 
-Sculpt a single stamp
+	 ![torus](img/05/Mug_and_Torus_morph.gif)    
+	- This gif clip is from [wikipedia](http://en.wikipedia.org/wiki/Topology)
 
-# Model: Mobius
+### More examples
+
+There are many surfaces with a variety of looks that are topologically the same.
+  
+![topo02](img/05/topo.jpg)   
+- The image is from [Math Hangout](http://mathhangout.weebly.com/stuff.html)
+
+
+- Check out more about topology from the [Annenberg Learner website](http://www.learner.org/courses/mathilluminated/units/4/textbook/03.php)  
+
+--------------------------------------------
+# Color texture in 3D printing
+## Printing via Shapeways
+- [Full Color Sandstone Material Information](https://www.shapeways.com/materials/full-color-sandstone)  
+- [Exporting to VRML and X3D for color printing](https://www.shapeways.com/tutorials/exporting_to_vrml_and_x3d_for_color_printing)  
+
+	Uploading a file with texture maps requires a few steps: 
+
+	- In your 3D application, create a texture map.
+		- UV texture
+		- JPG or PNG format.
+		- The total resolution of your texture maps below 2048x2048 pixels.
+	- Export your model to VRML97 or X3D.
+	- Create a .zip archive of the exported model, and all the texture map images.
+	- Upload ***the archive***.
+
+### Related tutorial
 - [Shapeways: Exporting from Maya using COLLADA](https://www.shapeways.com/tutorials/exporting-from-maya-with-collada-3dprinting)
 
-## A. Scale of the model 
-Check the unit conversion in your software (mm to cm or similar).  
-- **In Maya:**
-go to 'Window / Settings/Preferences / Preferences / Settings' and set your units. Since Shapeways displays metric units, set it to centimeters.
-
-## B. Hollowing the model
-Hollowing out your model can result in a tremendous reduction of material used, and thus money spent. 
-- **In Maya:**
-go to 'Edit Mesh / Extrude'. From the channel box add the thickness value to **'the local translation Z'.
-
-## C. Smoothing the model
-when you complete all the processes, just before exporting the final object, you can smooth the model to gain the high refined result. 
-- **In Maya:** 
-do a mesh smooth 'Mesh / Smooth' with a level of 1 or 2 depending on how smooth you want it to be and how many polygons it results in. 
-
+---------------------------------------------
 # Texture
 ## UV texturing in Maya
 The below image shows how to do UV mapping and the use of place2DTexture node for the 2D texture placement.  
@@ -63,35 +92,111 @@ The below image shows how to do UV mapping and the use of place2DTexture node fo
 ![tex](img/texturing.png)
 
 ## Reference
-- [Shapeways: Exporting to VRML and X3D for color printing](https://www.shapeways.com/tutorials/exporting_to_vrml_and_x3d_for_color_printing)  
-### Process outline
-
-1. In your 3D application, create a texture map.
-In Maya, 1. an objet need UV coordinates. 2. you need to assign a material to link a texture map. 3. Export it as a obj file checking material on in the export option.  
-2. Export your model to VRML97 or X3D.
-We can change obj or stl to x3d in Meshlab. 
-3. Create a .zip archive of the exported model, and all the texture map images - no folder included.  
-4. Upload the archive.
-
-
-
-
-
-# Color: texture map
-## Reference
 - [LGM: EXPORTING A MODEL WITH COLOR AND/OR TEXTURE MAPS](http://www.lgm3d.com/blog/exporting-a-model-with-color-and-or-texture-maps)  
 3D Printing in Color can be difficult, especially the first time. It requires particular file formats and each CAD package has different output options.  
 
+# Practice
+## In Maya
+### Assigning a texture to a geometry
+- Create a sphere (Create / Polygon primitives / Sphere)  
+- Assign a general material such as a Blinn, Phong, or Lambert shader. (In the pop window from RMB, choose one from Assign Favorite Material)  
+- Choose the sphere, and open the attribute editor.  
+- We can assign a texture from the Color attribute.
+- We can adjust the texture using the 2D placement manipulator or at the 'place2dTexture3' from the attribute editor.  
+### Save as an obj file with a texture. 
+- If the texture is not a bitmap texture, you need to save it as bitmap file. (You can do it at the UV texture window)  
+- If the texture is a bitmap texture, when you export the geometry as the obj file, please set the Materials to be on.
+
+![tex01](img/05/tex.png)
+
+---------------------------------------------
+# General preparation of a mesh for 3D printing
+## A. Scale of the model 
+Check the unit conversion in your software (mm to cm or similar).  
+
+### In Maya:
+Go to 'Window / Settings/Preferences / Preferences / Settings' and set your units. Since Shapeways displays metric units, set it to *centimeters*.
+
+## B. Hollowing out the model
+Hollowing out your model can result in a tremendous reduction of material used, and thus money spent. 
+
+### In Maya:
+Go to 'Edit Mesh / Extrude'.   
+From the channel box, add a thickness value to **'the local translation Z'**.
+
+## C. Smoothing the model
+When you complete all the processes, just before exporting the final object, you can smooth the model to gain a more highly refined result. 
+
+### In Maya: 
+Do a mesh smooth 'Mesh / Smooth' with a level of 1 or 2, depending on how smooth you want it to be and how many polygons it results in. 
+
+------------------------------------
+# Practice
+## Creating a Möbius strip in Maya
+- Create a box (Create / Polygon primitives / box)  
+- At the right of the work space, under the Channel box, there is an Inputs section. Change the value as in the image below:
+
+![mb01](img/05/mb01.png)
+
+- Change the menu module set from Modeling to Rigging (upper left corner). Go to Deform / Nonlinear / Twist) and apply it. From the channel box, change the Rotate Z value to 90. 
+
+![mb02](img/05/mb02.png)
+
+- Go to Deform / Nonlinear / Bend) and apply it. From the channel box, change the Rotate Z value to 90 and from the Inputs node, change the curvature value to 180 degree.
+
+![mb03](img/05/mb03.png)
+
+## Creating a Möbius strip in Topmod
+- [TopMod - Moebius Strip Checkerboard by Dave Morris](https://www.youtube.com/watch?v=kipk60Fjt4A) 
+
+---------------------------------------
+## UV mapping in Maya
+- Choose the object
+- Go to UV / Planar. From its option box, choose Fit projection to Best plane and apply it. 
+	
+	![uv](img/05/uv.png)
+- Open the UV texture editor from Window menu to verify the UV texture	
+
+## Preparing a panoramic texture
+- Prepare a panoramic image (width can be 1K pixel)  
+- Using the photoshop, go to Image / Image size and change the parameter as the image below:
+
+![photo](img/05/hamilton.png)
+
+- Save the image.
+
+-------------------------------------------------
+## Applying texture in Maya
+- Select the object or faces and assign a material. From the material attributes you can link a file from its color attribute. 
+
+![tex01](img/05/tex01.png)
+
+### Select object
+- Choose the object and from right mouse button, you can choose the Assign Favorite Material and choose Blinn, Lambert, or Phong. 
+
+![mat](img/05/assign.png)
+
+### Select faces (a component of an object)
+- Select faces from RMB hot menu (component mode), and choose faces where you will assign the material.
+
+--------------------------------------------------
+## Save as an obj file with a material
+- Select the object and go to File/Export Selection and from the Export Selection Option window, chose OBJexport as File Type and from the File Type Specific Options, turn on Materials. 
+
+--------------------------------------------------
+## Converting .obj to .x3d in Meshlab
+- Go to File / Import mesh and import the obj file (the texture file will come by automatically) and go to File / Export Mesh as to export it as .x3d.
 
 
+---------------------------------------------------
+## Upload to Shapeways
+- Create a .zip archive of the exported model, and all the required texture maps. Zip the individual files; and don't include any folders!
+- Uploading the zipped archive is identical to a regular model upload. 
 
-----------------------
-## Case study
-Bathsheba Grossman
+----------------------------------------------------
+## Optional: sculpting the surface of the Möbius strip
 
-http://www.evolution-of-genius.de/gallery/default.htm#
-Mathmod
-https://sourceforge.net/projects/mathmod/
+- Sculpt a stamp
 
 -----------------------------
 # Topmod
@@ -103,31 +208,28 @@ TopMod sites](https://sites.google.com/site/topmod3d/)
 ## Download
 - [Topmod 2.223 Sep 2007](https://code.google.com/p/topmod/issues/detail?id=2#c5.)
 
---------------------
-
 ## Inspiration
 - [FOLDING the UNFOLDABLE: QUAD-EDGE DATA STRUCTURES](https://www.youtube.com/watch?v=94FsyZv5Xlw) 
 
 ## Reference
+- [Bathsheba Grossman](https://www.bathsheba.com/bio/)
+- [Evolution-of-genius](http://www.evolution-of-genius.de/gallery/default.htm#Mathmod)
+- [Mathmod](https://sourceforge.net/projects/mathmod/)
 - [fabFAB](https://fabulouslyfabricated.wordpress.com/)  
 fabulouslyfabricated.wordpress.com was the online, virtual home for students undertaking the RMIT Communications Elective “Fabulously Fabricated”, which ran for three consecutive semesters in 2010 and 2011.  The blog is inactive now but remains online as a reference and resource.  For enquiries please contact Jessica In injihyun[at]gmail.com.
 
-
 -------------------------------------
-# Practice
-## Tutorial
-
-### Navigation
+# How to do
+## Navigation
 - Pan/track: Alt + mouse wheel button
 - Rotate/tumble: Alt + mouse left button
 - Zoom: mouse wheel button
 
-### Resetting camera
+## Resetting camera
 - Display / Reset camera (F)
 
-- [TopMod - Moebius Strip Checkerboard by Dave Morris](https://www.youtube.com/watch?v=kipk60Fjt4A) 
-
-## Topmod: dodecahedron
+# Practice in Topmod
+## Dodecahedron
 Inspiration: [Dode silver by CUNICODE](http://www.cunicode.com/store/)
 
 - Create Dodecahedron primitive: Primitives / Dodecahedron  
@@ -139,12 +241,16 @@ Inspiration: [Dode silver by CUNICODE](http://www.cunicode.com/store/)
 
 
 ----------------------------------------	
-
 ## Assignment
-
+- By Tuesday Oct 18th midnight, complete today's class works and upload your final color zip file to Shapeways, then upload a screenshot of it to Tumblr, 
+	- Please name your file with your name and date. The Caption for Tumblr is: "a05 by your name and date".   
 
 --------------
 ## Prepare for Next week's presentation
+
+- Please upload your pdf to present to the [Google drive](https://drive.google.com/drive/folders/0B7x8GrEkHm-Ld29JMmRCemtsWjQ?usp=sharing). Name your pdf as "yourLastnameFirstname".
+
+- A survey to choose your group members next week.
 
 ____________________
 
@@ -155,11 +261,14 @@ ____________________
 		
 		<h2>FA/VISA 3033</h2><h2>FA/DATT 3940</h2>		
 		<a href="index.html">Class overview</a><br/>
-				<a href="file/VISA3033_ji_2016.pdf">Syllabus pdf</a><br/><br/>   	
+		<a href="file/VISA3033_ji_2016.pdf">Syllabus pdf</a><br/><br/>   	
 		<a href=http://2016visa3033.tumblr.com/>Tumblr class portfolio</a><br/>
 		<a href=https://docs.google.com/spreadsheets/d/10F2hL8TmGVmrrsoCJejEzpArJBxQZTT81xbLGUx-qiY/edit?usp=sharing>Assignment grading</a><br/>
 		<a href=https://drive.google.com/drive/folders/0B7x8GrEkHm-LVFJraWpHaE9MX2M?usp=sharing>3D fab data</a><br/><br/>  					<a href="week01.html">Introduction</a><br/>	                                  					
-				<a href="week02.html">Voronoi Modeling</a><br/> 		<a href="week03.html">Online 3D printing</a><br/>                                 	
+		<a href="week02.html">Voronoi Modeling</a><br/> 		
+		<a href="week03.html">Online 3D printing</a><br/>  
+		<a href="week04.html">Chain mail</a><br/>     
+		<a href="week05.html">Möbius strip</a><br/>                                	
 
 	</div>
 	<div class="section">
