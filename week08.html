@@ -20,22 +20,192 @@ A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
 
 <div style="display: none" id="sourcetext">
 
+# Turn your 2D design into a 3D printed object
 
-------------------
-# Turn your 2D design into a 3D print
+## Goal
+Creating 2D images is many times easier and more intuitive than controlling 3D. Today, we will work on many different techniques and softwares to turn 2D images into 3D geometry. Through this process, you can add original and creative manual touches to your final 3D model. However we will not focus on specific 2D image techniques; I will leave that to your own unique artistic practice.
+
+## 2D images
+A **bitmap** is a representation of an image, consisting of rows and columns of pixels, that each store color information. Each pixel (picture element) contains a color value for a number of channels – usually red, green, and blue. When you view these channels together, at a high enough resolution, all of the different colored pixels form a complete image. These images can then be output to video, film, print, etc.
+
+**Vector** images are not based on pixel patterns, but instead use mathematical formulas to draw lines and curves that can be combined to create an image from geometric objects such as lines, circles, triangles, squares, and other polygons. Vector images are edited by manipulating the lines and curves that make up the image using a program such as Adobe Illustrator.
+
+Bitmap formats are best for images that need to have a wide range of color gradations, such as most photographs. Vector formats, on the other hand, are better for images that consist of a few areas of solid color. Examples of images that are well suited for the vector format include logos and text.
+
+Text from [tech-ease](http://etc.usf.edu/techease/win/images/what-is-the-difference-between-bitmap-and-vector-images/) 
+
+## Video
+
+- [Vector vs Bitmap](https://www.youtube.com/watch?v=fy9Pby0Gzsc) 
+
+----------------------------
+
+# Case studies
+
+- [Elvis Pompilio](http://www.mgxbymaterialise.com/designers/designer/detail/detail/25) 
+- [Sketch Furniture by FRONT](http://www.frontdesign.se/sketch-furniture-performance-design-project)  
+	- [Youtube video, 2007, 3:24](https://www.youtube.com/watch?v=8zP1em1dg5k)   
+
+## Building 3D in 3D	
+- [Building VR in VR with Unreal Engine 4 - Early Preview [1:58]](https://www.youtube.com/watch?v=JKO9fEjNiio) 	
+
+---------------------------
+# Practice 
+How and where you can change your 2D images to 2D geometries:
+
+## Using online apps
 - [Shapeways app](https://www.shapeways.com/creator/2dto3d#landing) 
-You can download the model as .. 
-You need Netfabb Basic to export it as obj. 
-Where to download Netfabb: [the link](http://macdownload.informer.com/netfabb-basic/download/)
+
+### Source: bitmap images such as .jpg or ,png. 
+
+![2d3d_src](img/07/giraffe-head-silhouette-clip-art-zebra.jpg)
+This is the sourceimage as .jpg
+
+![2d3d_shape](img/07/shapeways.png)
+
+You can download the converted geometry as .x3db
+And you can transfer this to more widely used geometry extension such as .obj or .stl using NetFabb Studio Basic. 
+
+You can download NetFabb Basic [here](http://macdownload.informer.com/netfabb-basic/download/)
+
+### Further tutorials
+
+- [How to Fix and Repair Your 3D Files Using Meshlab and Netfabb](https://www.shapeways.com/tutorials/how_to_use_meshlab_and_netfabb)  
+
+![2d3d_shape_nf](img/07/netfabb02.png)
+
+Netfabb Studio Basic.
+
+![2d3d_shape_nf01](img/07/netfabb03.png)
+
+Once you have a geometry, you can combine, edit, and deform the object using your favorite software.
+
+- [Selva 3d](http://www.selva3d.com/)
+
+You can transform 2D images into 3D models. However it is free only if you want to download low resolution geometry. From the below image, you can compare the result from 1. Shapeways to NetFabb and the result from 2. Selva3D.
+
+![2d3d_shape_nf02](img/07/netfabb.png)
+
+The first case: Shapeways to NetFabb
+
+![2d3d_shape_sv](img/07/netfabb01.png)
+
+Comparison between the first case and the geometry downloaded from Selva3D. Low quality is free but high quality stl data is not free from Selva3D.
+
+![2d3d_shape_sv01](img/07/selva.png)
+
+---------------------------------
+
+## Using Thinkercad
+- [Thinkercad](https://www.tinkercad.com/)  
+
+The source image is .svg (a kind of vector graphic), and Thinkercad turns it into 3D geometry immediately.
+
+![2d3d_shape_tc](img/07/thinkercad.png)
+
+The dialog window pops up when you import an svg file.
+
+![2d3d_shape_tc01](img/07/thinkercad01.png)
+
+The dialog window pops up when you export the transformed geometry.
+
+------------------------------------
+
+## Using Blender
+### Source: vector image. 
+
+To convert a 2D vector image into 3D using Blender your source image must be an .svg file.
+Black and white silhouette designs work best.
+
+### How:
+- Prepare .svg silhouette vector image.
+- From Blender, import the image.
+
+![2d3d_shape_bl00](img/07/Chandelier.svg)
+The source vector image as .svg.
+
+![2d3d_shape_bl](img/07/bl01.png)
+
+- Choose the imported object and scale it up. 
+
+- From the right tool settings, choose the curve and add the Extrude value. It will define the height of the geometry. Then you can export the geometry with several different formats including .obj and .stl.
+
+![2d3d_shape_bl01](img/07/bl02.png)
+ 
+### Tutorial
+- [Blender-Converting 2D Image to 3D Object by bugzilla2001](https://www.youtube.com/watch?v=ows2QTiMRPg)  
+
+
+----------------------------------------
+
+## Using Maya
+** The source can be a vector or bitmap image.** 
+### For vector images use Illustrator version 8 .ai or .eps files
+
+- [Quick Tip: Converting Vector Logos to 3D from Illustrator to Maya](https://cgi.tutsplus.com/tutorials/quick-tip-converting-vector-logos-to-3d-from-illustrator-to-maya--cg-6466): This has two tutorials. One to extrude and the other using Bevel Plus.   
+
+### Using bitmap image such as .jpg or .png and more.
+
+- [Maya Tutorial- how to create 3D logo's from pictures](https://www.youtube.com/watch?v=WxlLUDZQS6E)  
+
+![2d3d_maya_con](img/07/maya_convert.png)
+
+### Drawing on 3D surface
+
+How to do: 
+
+**Preparation**
+
+- Select a base object and from the mouse right button menu, apply Make live.
+	- You can find a base object from Window / General Editors / Visor. In the Visor, under the Sculpting Base Meshes, there are several folders which have base meshes. You can select one and click the mouse right button then click the import Maya file pop-up menu.	
+	- [Set a live surface](https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/Maya/files/GUID-EBF1E652-4DDD-423F-B42E-3BF85AE46A5D-htm.html)  
+	
+**Drawing on surface**
+
+- Select Mesh Tools / Create Polygons and draw on the surface. Once you finish, press enter to complete it.   
+- To make it as a stable polygon, apply Mesh / Triangulate  
+- To add thickness, select all faces (in the component mode) apply Edit Mesh / Extrude. and add a thickness value to Local Translate Z attribute. 	  
+
+**Subdivision**
+
+- To make it smoother and more organic, select the object and then apply Mesh / Smooth.  
+
+![2d3d_maya_01](img/07/mask.png)
+![2d3d_maya_03](img/07/maya_live02.png)
+![2d3d_maya_04](img/07/maya_live03.png)
+
+### Constrain objects on a 3D surface
+
+How: 
+- Related tutorial: [Normal (Constraint) #example_01](https://www.youtube.com/watch?v=ZsAiX6Xyf6A)
+
+- Select the constraining object and then shift-select the constrained object, and apply Animation module set // Contrain / Geometry constrain. 
+
+- Repeat the selection of constraining and constrained objects, and then apply Animation module set // Constrain / Normal constrain. 
+
+- You can change the constrained object's direction by its normal Constraint node / Normal Constraint Attributes. Change the Aim vector to change the direction. (1: on, 0:off)
+
+- If you want to duplicate the constrained object with its attributes, you can go Edit / Duplicate Special and check Duplicate Input Graph and duplicate your objects. They will behave the same as the previous objects. 
+
+![2d3d_maya_02](img/07/maya_live01.png)
+
+### Helpful references
+
 - [Maya: Troubleshoot imported vector data](http://help.autodesk.com/view/MAYAUL/2016/ENU//index.html?guid=GUID-05A64113-C6EE-4456-88A4-2ADCF23DD40E)  
+
 - [Maya: Import vector data as curves or generate polygonal surfaces](https://knowledge.autodesk.com/support/maya-lt/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/MayaLT/files/GUID-EF3ED536-7C44-4225-AD4F-2FB0E0DD0362-htm.html)  
-- [Selva3d app](http://app.selva3d.com/transform)
-Low quality is free but high quality stl data is not free.
 
+- [From 2D to 3D Using Inkscape to Shapeways / OpenSCAD) by unkerjay in 3D-Printing](http://www.instructables.com/id/From-2D-to-3D-Using-Inkscape-to-Shapeways-OpenSCAD/)  
 
-[VFX / Voronoi Cage from Blender Sushi](http://blendersushi.blogspot.ca/2012/07/vfx-voronoi-cage.html) 
 ____________________
 
+## Assignment
+- By Monday Nov 7 midnight, complete today's class work and upload your unique customized 2D to 3D modeling process and result screenshot(s) with a name to Tumblr (it should work as a tutorial). Also add its modeling data to the google drive. 
+	- Consider factors for fabrication: size, stability, strength.
+	- Please name your file with your name and date. The caption for Tumblr should be: "a08 by your name and date".   
+	
+----------------------------------------		
+	
 </div>
 <div id="wrapper">
 	
@@ -54,7 +224,7 @@ ____________________
 		<a href="week05.html">5. Möbius strip</a><br/>   
 		<a href="week06.html">6. Mid-term presentation</a><br/>  
 		<a href="week07.html">7. Topological approach</a><br/> 
-		<a href="week.html">8. 2D to 3D</a><br/>  
+		<a href="week08.html">8. 2D to 3D</a><br/>  
 		<a href="week.html">9. 3D printing</a><br/> 
 		<a href="week.html">10. 3D sculpt</a><br/> 
 		<a href="week.html">11. 3D scan</a><br/>  
