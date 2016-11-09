@@ -20,62 +20,177 @@ A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
 
 <div style="display: none" id="sourcetext">
 
-# The fundamental of 3D modeling 
-### 3D files
-We need specific 3D modeling data “tells” the printer what to print.
+# 3D Printing 
+## Makerbot Replicator 2
 
-- STL (STereoLithography): The STL file simply defines points in space and connects those points together to form a series of triangles, which in total, are called a “mesh” or “mesh object.” The file is called a “shell model” and can be thought of as a thin skin with a hollow interior.  
+![makerbot](img/09/repligator.jpg)
 
-- OBJ   
+- 4th Generation
+- Print Technology: Fused Deposition Modeling  
+- Build Volume: 24.6 L X 15.2 W X 15.5 H cm [9.7 X 6.0 X 6.1 in] 5796 cubic cm [354 cubic in]  
+- Layer Resolution: 100 microns [0.0039 in]
+- Filament Diameter: 1.75 mm [0.069 in], PLA Filament
+- Nozzle Diameter: 0.4 mm [0.015 in]
 
-------------------
-# Crafting new industires
-## Eco-freindly
+### Software
+
+- MakerBot Desktop Software download:
+	- [MAKERBOT DESKTOP 3.10.0](https://www.makerbot.com/download-desktop/)
+	- [Olrder version of Makerbot Desktop](https://www.makerbot.com/download-desktop/) 
+- Supported File Types: Stl, Obj, Thing, Makerbot
+- Operating Systems: Windows (7+), Mac Os X (10.7+), Linux (Ubuntu 12.04+)
+- Connectivity: USB, SD CARD (Both a USB cable and SD Card Included)
+
+### Printing
+- The Makerbot Replicator 2 uses the **x3g file format** for printing:  
+	This is a binary file that the machine reads which contains all of the instructions for printing. The MakerBot Desktop software can be setup to output this file format directly. The output x3g file can then be printed in two ways. You can copy it to the machine’s SD card and use the built-in LCD menu or you can stream the file directly to your machine via a connected USB cable.
+
+### Reference
+- [HOW TO PREPARE A MODEL FOR PRINTING](https://support.makerbot.com/learn/makerbot-desktop-software/using-makerbot-desktop/how-to-prepare-a-model-for-printing_11922)  
+- [MakerBot Replicator 2 3D printer bridging](https://www.youtube.com/watch?v=M4DfoyDIr8c) 
+- [Best Printing Practices on Makerbot Replicator 2 and 2X](https://www.3dhubs.com/talk/thread/best-printing-practices-makerbot-replicator-2-and-2x)  
+- [MakerBot Desktop Software docu](https://support.makerbot.com/Learn/makerbot-desktop-software)  
+
+### Print settings per material 
+
+- PLA (Only on Replicator 2)
+- Print temp: 220°C ~ 230°C (at 90 ~ 100m/s, 40 ~ 50m/s)
+- Notes: heated bed optional between 40 and 60°C
+
+### Speed vs. Quality settings
+ 
+- Quality  
+For the highest quality print choose 10% infill and a layer height of 0.1 mm. Depending on the print, kick down the speed even further to below the Makerware advised settings. Although these settings result in the highest quality, as a beginner it is advised to first get comfortable with all the settings at “medium” or “low” quality. Highest quality prints also have a higher failure rate.
+ 
+- Speed  
+If you want to print very fast you could of course crank up the extrusion speed to 100 m/s but there are other possibilities as well. Setting the infill to 0% will result in a super fast, but hollow print, making your Makerbot Replicator 2 whistle due to its active cooling (no harm done). But be careful: some prints will collapse since they become too unstable to support their own exterior structure.
+
+- [What is the influence of infill %, layer height and infill pattern on my 3D prints?  
+ Quality / speed / strength / cost.](http://my3dmatter.com/influence-infill-layer-height-pattern/)  
+ 
+### Supporting
+ 
+- Rafts  
+Enabling the raft option will provide your print with a broader first layer. This is especially helpful with larger prints because it will reduce warping and help the print stick better to the building platform. However you will have to spend some time afterwards cleaning up the print. 
+
+- [Rafts, Skirts and Brims!](https://www.simplify3d.com/support/articles/rafts-skirts-and-brims/)
+
+- Support  
+Makerware offers one option for support. This should be used in cases of extreme overhang (over 45 degrees), but is dependent on the shape as well. When crossing a gap between two objects, the overhang can in some case be more than 45 degrees without any need for support.
+
+### Machine Hygiene/Maintenance
+ 
+- Leveling the build plate  
+Leveling the build plate frequently is very important to keep your machine in top notch condition. Even a very small inaccuracy can make the difference between a good and a poor print. Run the standard procedure from your printer’s menu and use a business card for the correct distance between your nozzle and build plate.
+ 
+- Cool Down Time  
+The best thing to do after a print has been completed is to cool down your machine entirely before switching it off. But, if you are in a rush, make sure to at least get it under 100°C before switching it off. 
+ 
+- Build plate cleaning  
+It is important that your build plate provides a rough surface in order for prints to be able to stick to it. Grease from either your hands or lubricating the machine is something you do not want. Make sure you completely clean the build plate on a regular basis, preferably with some acetone and a lint free towel. Need a quick fix for adhesion problems? Try prepping your build plate with a thin layer of glue from a glue stick.
+ 
+- Lubrication  
+Nearly all the parts of the Replicator 2 & 2X are self lubricating apart from the threaded rod and x-axis idler pulley. To improve the overall life of your printer, make sure to lubricate them once you start hearing squeaky noises or after 50 hours of printing.  
+
+----------------------------------------
+## G-code generators for 3D printers
+- [Slic3r](http://slic3r.org/)  
+Slic3r is the tool you need to convert a 3D model into printing instructions for your 3D printer. It cuts the model into horizontal slices (layers), generates toolpaths to fill them and calculates the amount of material to be extruded.  
+Slic3r is based on a community of people working collaboratively on GitHub, discussing new features and testing them. It's being used by thousands of people all over the world, and there are more than 500 forks of it. It's a non-profit project. 3D printing became a business since the RepRap community was born, but we want to keep 3D printing free, and Slic3r will always be an independent project, not driven by any business or single vendor.
+
+
+- [Cura](https://ultimaker.com/en/products/cura-software)  
+Cura is the 3D model to toolpath Slicer by Daid (David Braam). Cura is free Open Source software released on the AGPLv3 license.
+It is currently maintained by Ultimaker who employed David to work on it. Cura is well suited for Bowden-extruder machines like the Ultimaker and most Delta-bots. also you can use it with most of reprap printers. Cura features it's own Slicing engine, GCode sender and other tools to provide an "all in one" solution for 3D printing. However all components can be used on their own.
+
+- And [more gcode generators](http://3dprintingforbeginners.com/software-tools/)  
+
+## Tutorial
+- [Introduction to Slicing with Cura](https://www.youtube.com/watch?v=biCWssfil2A)  
+- [Cura 3D Tutorial](https://all3dp.com/cura-tutorial-3d-printing/)  
+
+---------------------------
+## The A-Z 3D printing handbook by SD3D
+This handbook covers 26 unique 3D printing terms and tutorials.  From A-Z, every category is covered.  Learn about alternative types of printing, heated beds, infill and support settings, and much much more: 
+
+[Download the A-Z 3D printing handbook pdf](http://www.sd3d.com/handbook/)
+
+## 3D Printing Problems
+- [Troubleshooting Guide to 14 Common 3D Printing Problems:](https://all3dp.com/common-3d-printing-problems-3d-printer-troubleshooting-guide/?utm_source=Newsletter&utm_campaign=36e421a5a4-Newsletter&utm_medium=email&utm_term=0_9dffeeddae-36e421a5a4-377085829)
+- [Print Quality Troubleshooting Guide by Simplify3D](https://www.simplify3d.com/support/print-quality-troubleshooting/?utm_source=Welcome%20Email&utm_medium=Email&utm_campaign=New%20Customer%20Print%20Quality)
+	- Warping
+	- Elephant Foot
+	- More First Layer Problems
+	- Layer Misalignment
+	- Missing Layers
+	- Cracks In Tall Objects
+	- Pillowing
+	- Stringing
+	- Under-Extrusion
+	- Over-Extrusion
+	- Shifting Layers
+	- Blocked Bowden Nozzle
+	- Snapped Filament
+	- Stripped Filament
+
+----------------------------------------------
+## Case study	
+### Printing with reusable material
 - [The Hyrel 3D Printers Let Users Print with Recycled Materials](http://www.trendhunter.com/trends/3d-ink) 
 
 --------------------
-# Design Guidelines for Successful 3D Printing
-## Part Heights
+## Design Guidelines for Successful Modeling for 3D Printing
+From the book Beginning Design for 3D Printing by Joe Micallef, Apress, 2015
 
-## Build Orientation
+- Part heights
+- Build orientation
+- Overhangs and angled geometry (the 45-degree rule)
+- Repeated overhangs
+- Part thickness
+- Connected parts
+- Fine details
+- Chamfers    
+(Chamfers are a type of bevel that can be added to the corners of objects to flatten out edges)
+- Recesses and holes
+- Work with gravity, bridges, and arc
+- Pinnacles
+- Dividing objects into pieces and creating assemblies for best outcomes
+- Hollow parts
 
-## Overhangs and Angled Geometry (the 45-Degree Rule)
+--------------------------------------
+## How to analyze and fix your model 
 
-## Repeated Overhangs
+- [Materialise cloud: online tools to prepare your models for 3D printing](https://cloud.materialise.com/tools)  
 
-## Part Thickness
+### 3D files
+We need specific format of 3D modeling data that can “tell” the printer what is to be printed.
 
-## Connected Parts
+- [STL](https://en.wikipedia.org/wiki/STL_(file_format)) (STereoLithography): The STL file simply defines points in space and connects those points together to form a series of triangles, which in total, are called a “mesh” or “mesh object.” The file is called a “shell model” and can be thought of as a thin skin with a hollow interior.  
 
-## Fine Details
+- [OBJ](https://en.wikipedia.org/wiki/Wavefront_.obj_file) .OBJ format is considered to be more complex than .STL file for the fact that it is capable of representing texture, color and other CAD attributes of the three-dimensional object. .OBJ is also easily exported from most CAD tools and is supported by 3D printers.
 
-## Chamfers 
-Chamfers are a type of bevel that can be added to the corners of objects to flatten out edges
+The big difference between STL and OBJ meshes is what’s displayed on the surface. STL files don’t display any data on the surface of the mesh. They indicate only the surface itself–the geometry of the object, how big it is and the shape of its sides, but that’s about it. That’s why STLs are greyscale by default.
 
-## Recesses and Holes
+- [Slicers, g-code and x3g](http://markwal.github.io/3dprinting/2015/04/27/slicers-gcode-and-x3g.html)     
 
-## Work with Gravity, Bridges, and Arc
+_________________________
 
-## Pinnacles
-
-## Dividing Objects Into Pieces and Creating Assemblies for Best Outcomes
-
-## Hollow Parts
-
-Beginning Design for 3D Printing
-by Joe Micallef
-Published by Apress, 2015
-
-
-----------------------
-## Case study
-### 
+## Rhino
+We will have a short presentation about how to use Rhino, by David Fisher.
 
 ----------------------
 ## Practice
-This handbook covers 26 unique 3D printing terms and tutorials.  From A-Z, every category is covered.  Learn about alternative types of printing, heated beds, infill and support settings, and much much more: [link to download the pdf](http://www.sd3d.com/handbook/)
+- Prepare the obj or stl modeling data from each group, using any g-code generator.
+
 ____________________
+
+## Group Assignment
+By Tuesday Nov 15 at midnight, please develop the draft document from last week for your group project and copy and upload it to Tumblr. This time, please add a plan and describe your processes to accomplish the group project. Please discuss which part from your group project you want to print out. 
+
+____________________
+
 ## Assignment
+- Review & practice. 
 
 ____________________
 
@@ -98,7 +213,7 @@ ____________________
 		<a href="week06.html">6. Mid-term presentation</a><br/>  
 		<a href="week07.html">7. Topological approach</a><br/> 
 		<a href="week08.html">8. 2D to 3D</a><br/>  
-		<a href="week.html">9. 3D printing</a><br/> 
+		<a href="week09.html">9. 3D printing</a><br/> 
 		<a href="week.html">10. 3D sculpt</a><br/> 
 		<a href="week.html">11. 3D scan</a><br/>  
 		<a href="week12.html">12. Final-term presentation</a><br/>                                
